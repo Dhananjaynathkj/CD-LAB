@@ -245,7 +245,7 @@ int|char|float { return TYPE; }
 int yywrap() { return 1; }
 
 
-test.c
+INPUT FILE (test.c)
 
 main() {
     int a, b, c;
@@ -261,3 +261,9 @@ main() {
         c = a + b;
     }
 }
+#COMPILE WAY
+lex bnf.I
+yacc -d bnf.y
+gcc y.tab.c lex.yy.c
+./a.out test.c
+
