@@ -61,4 +61,11 @@ gcc Valid.tab.c lex.yy.c -o program -lfl
 ./program
 
 
+#compilation code
+lex Calc.I
+yacc -d Calc.y
+gcc y.tab.c lex.yy.c
+./a.out
+
+
 
