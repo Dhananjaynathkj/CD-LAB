@@ -38,3 +38,10 @@ int main() {
     yylex();
     return 0;
 }
+
+
+#compile code
+lex Valid.I
+yacc -d Vaid.y
+gcc y.tab.c lex.yy.c
+./a.out
