@@ -67,3 +67,10 @@ Calc.I
 %%
 
 int yywrap() { return 1; }
+
+
+# compilation way
+lex Calc.I
+yacc -d Calc.y
+gcc y.tab.c lex.yy.c
+./a.out
