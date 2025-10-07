@@ -67,4 +67,9 @@ int yywrap()
     return 1;
 }
 
+#COMPILATION CODE
+lex For.I
+yacc -d For.y
+gcc y.tab.c.lex.yy.c
+./a.out
 
